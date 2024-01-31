@@ -1,5 +1,5 @@
-import Component from 'react';
-import nanoid from 'nanoid';
+import { Component } from 'react';
+import { nanoid } from 'nanoid';
 import Notiflix from 'notiflix';
 import Section from './Section/Section.jsx';
 import ContactForm from './ContactForm/ContactForm.jsx';
