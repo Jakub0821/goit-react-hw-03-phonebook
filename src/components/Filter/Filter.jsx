@@ -1,25 +1,18 @@
+import React from 'react'
 import PropTypes from 'prop-types';
 
-const Filter = ({ filterTitle, inputFilterValue, addCurrentValue }) => {
+export const Filter = ({ filteredList }) => {
+  const handleInputChange = (e) => {
+    filteredList(e.target.value);
+  };
   return (
-    <div>
-      <form>
-        <h4>{filterTitle}</h4>
-        <input
-          type="text"
-          name="filter"
-          value={inputFilterValue}
-          onChange={addCurrentValue}
-        />
-      </form>
-    </div>
+    <>
+      <p>Find contacts by name</p>
+      <input onChange={handleInputChange} />
+    </>
   );
 };
 
 Filter.propTypes = {
-  filterTitle: PropTypes.string,
-  inputFilterValue: PropTypes.string,
-  addCurrentValue: PropTypes.func,
+  ilteredList: PropTypes.func,
 };
-
-export default Filter;
